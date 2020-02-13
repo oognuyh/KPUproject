@@ -1,1 +1,0 @@
-<strong>TOUR API</strong>
