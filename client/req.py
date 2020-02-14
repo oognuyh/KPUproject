@@ -4,12 +4,23 @@
 
      자신의 테스트 환경에 맞춰서 IP와 PORT 수정 필요
 """
+from sshtunnel import SSHTunnelForwarder
 import requests
 
-SERVER_IP = '192.168.1.51'
+SERVER_IP = ''
 SERVER_PORT = '5000'
+SERVER_USER = ''
+SERVER_PWD = ''
 
-url = f'http://{SERVER_IP}:{SERVER_PORT}/predict'
+server = SSHTunnelForwarder(ssh_address_or_host = SERVER_IP, 
+                            ssh_username = SERVER_USER,
+                            ssh_password = SERVER_PWD,
+                            remote_bind_address = ('127.0.0.1', SERVER_PORT))
+
+server.start()
+
+url_pred = f'http://127.0.0.1:{server.local_bind_port}/predict'
+url_hi = f'http://127.0.0.1:{server.local_bind_port}/hi'
 
 X = {'ntceInsttNm' : 1, 
      'dminsttNm' : 36, 
@@ -19,6 +30,15 @@ X = {'ntceInsttNm' : 1,
      'hour' : 10, 
      'minute' : 30}
 
-Y = requests.get(url, json = X)
-
-print(Y.json())
+try:
+    print('---------------------------')
+    r = requests.get(url_hi)
+    print(r.text)
+    print('---------------------------')
+    r = requests.get(url_pred, json = X)
+    print(r.json()[0])
+    print('---------------------------')
+except Exception as e:
+    print(e)
+finally:
+    server.stop()
