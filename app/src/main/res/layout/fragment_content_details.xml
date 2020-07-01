@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 콘텐츠 대표 이미지 없을 경우 invisible 처리 -->
+        <ImageView
+            android:id="@+id/content_details_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+        <!-- 콘텐츠 제목 -->
+        <TextView
+            android:id="@+id/content_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/content_details_thumbnail"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+
+        <!-- 콘텐츠 개요 -->
+        <TextView
+            android:id="@+id/content_details_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_details_title"
+            android:textSize="13sp"/>
+
+        <!-- 콘텐츠 상세 정보 -->
+        <LinearLayout
+            android:id="@+id/content_details_details"
+            android:layout_below="@id/content_details_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/content_details_card_recommend"
+            android:layout_below="@id/content_details_details"
+            app:cardCornerRadius="10dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/content_details_rcv_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="댓글을 입력해 주세요"
+            android:layout_below="@+id/content_details_card_recommend"
+            android:id="@+id/comment_input"
+            ></EditText>
+        <Button
+            android:id="@+id/comment_btn"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="입력"
+            android:layout_below="@id/comment_input"
+            android:layout_alignParentRight="true"
+            />
+        <ListView
+            android:id="@+id/comment_list"
+            android:layout_below="@id/comment_btn"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <LinearLayout
+            android:layout_below="@id/comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.skt.Tmap.TMapView
+                android:id="@+id/content_details_tmap"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+            <Button
+                android:id="@+id/content_details_btn_unity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="도보 길찾기"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

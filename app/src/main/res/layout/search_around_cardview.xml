@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/search_around_cardview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/search_around_cardview_background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <ProgressBar
+            android:id="@+id/search_around_cardview_progressbar"
+            style="@android:style/Widget.Holo.Light.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/search_around_cardview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="bottom|center"
+            android:text="현구네 집"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:background="@color/transparent_grey"/>
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

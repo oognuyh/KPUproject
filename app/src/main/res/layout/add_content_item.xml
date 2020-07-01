@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/add_content_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="남천병원"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_margin="4dp"
+        android:id="@+id/add_content_item_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="경기도 군포시 수리산로"/>
+
+</LinearLayout>

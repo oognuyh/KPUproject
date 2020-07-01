@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "39677162065",
+    "firebase_url": "https://flipthetripover.firebaseio.com",
+    "project_id": "flipthetripover",
+    "storage_bucket": "flipthetripover.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39677162065:android:d1420d7b78f728fd493e70",
+        "android_client_info": {
+          "package_name": "com.fleecyclouds.flipthetripover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39677162065-iv0fdv212kihpveb8mmqjq4t0133bgue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS4gZGMSI6g8ih4nO8TEwqOwogix0E18I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39677162065-iv0fdv212kihpveb8mmqjq4t0133bgue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

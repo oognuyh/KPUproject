@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialCalendarFullscreenTheme">@style/CustomCalendarFullscreen</item>
+    </style>
+    <style name="CustomCalendarFullscreen" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen">
+        <item name="materialCalendarStyle">@style/CustomCalendar.Fullscreen</item>
+    </style>
+    <style name="CustomCalendar.Fullscreen" parent="@style/Widget.MaterialComponents.MaterialCalendar.Fullscreen">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+</resources>

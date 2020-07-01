@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.fleecyclouds.flipthetripover"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Jetpack Navigation Library - https://developer.android.com/guide/navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0-alpha06'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0-alpha06'
+
+    // Retrofit(Network Library) - http://devflow.github.io/retrofit-kr/
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+
+    // CarouselView(Banner Library) - https://github.com/jama5262/CarouselView
+    implementation 'com.synnapps:carouselview:0.1.5'
+
+    // FoldingCell(FoldingCell UI Library) - https://kmshack.github.io/AndroidUICollection/2018/10/11/FoldingCell/
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+
+    // Picasso(Image Library) - https://github.com/square/picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Google GPS(Location Service) - https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderClient
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    // TimelineView(Timeline Library) - https://github.com/vipulasri/Timeline-View
+    implementation 'com.github.vipulasri:timelineview:1.1.4'
+
+    // Google material Library
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+
+    // github.denzcoskun image slider library
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
+
+    // volley network
+    implementation 'com.android.volley:volley:1.1.0'
+
+    // firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    // unity
+    implementation project(path: ':unityLibrary')
+}

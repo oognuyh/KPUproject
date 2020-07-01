@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_splash">
+
+    <fragment
+        android:id="@+id/fragment_splash"
+        android:name="com.fleecyclouds.flipthetripover.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            app:popUpTo="@id/fragment_splash"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashFragment_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.fleecyclouds.flipthetripover.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/fragment_planner"
+        android:name="com.fleecyclouds.flipthetripover.planner.PlannerFragment"
+        android:label="PlannerFragment" >
+        <action
+            android:id="@+id/action_fragment_planner_to_addItineraryFragment"
+            app:destination="@id/addItineraryFragment" >
+            <argument
+                android:name="startDate"
+                app:argType="long"/>
+            <argument
+                android:name="endDate"
+                app:argType="long"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_share"
+        android:name="com.fleecyclouds.flipthetripover.share.ShareFragment"
+        android:label="ShareFragment" />
+    <fragment
+        android:id="@+id/fragment_my_account"
+        android:name="com.fleecyclouds.flipthetripover.myaccount.MyAccountFragment"
+        android:label="MyAccountFragment" />
+    <fragment
+        android:id="@+id/contentDetails"
+        android:name="com.fleecyclouds.flipthetripover.searcharound.ContentDetailsFragment"
+        android:label="ContentDetails" />
+    <fragment
+        android:id="@+id/fragment_search_around"
+        android:name="com.fleecyclouds.flipthetripover.searcharound.SearchAroundFragment"
+        android:label="SearchAroundFragment" >
+        <action
+            android:id="@+id/action_searchAroundFragment_to_contentDetails"
+            app:destination="@id/contentDetails" >
+            <argument
+                android:name="contentId"
+                app:argType="string"/>
+            <argument
+                android:name="contentTypeId"
+                app:argType="string"/>
+            <argument
+                android:name="longitude"
+                app:argType="string"/>
+            <argument
+                android:name="latitude"
+                app:argType="string"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/addItineraryFragment"
+        android:name="com.fleecyclouds.flipthetripover.planner.AddItineraryFragment"
+        android:label="AddItineraryFragment" >
+        <action
+            android:id="@+id/action_addItineraryFragment_to_fragment_planner"
+            app:destination="@id/fragment_planner" />
+        <argument
+            android:name="startDate"
+            app:argType="long" />
+        <argument
+            android:name="endDate"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_addItineraryFragment_to_addContentFragment"
+            app:destination="@id/addContentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContentFragment"
+        android:name="com.fleecyclouds.flipthetripover.planner.AddContentFragment"
+        android:label="AddContentFragment" >
+        <action
+            android:id="@+id/action_addContentFragment_to_addItineraryFragment"
+            app:destination="@id/addItineraryFragment"/>
+    </fragment>
+</navigation>

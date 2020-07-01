@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/content_details_rcv_item_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:layout_width="150dp"
+    android:layout_height="150dp">
+    <ProgressBar
+        android:id="@+id/content_details_progress"
+        android:layout_gravity="center"
+        style="@android:style/Widget.Holo.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/content_details_rcv_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/content_details_rcv_item_title"
+        android:background="@color/transparent_grey"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_gravity="bottom"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+</androidx.cardview.widget.CardView>

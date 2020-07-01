@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/notice">
+        <!-- 깃에서 만든거에요 ㅎㅎㅎ
+           implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
+            https://github.com/denzcoskun/ImageSlideshow
+        -->
+        <com.denzcoskun.imageslider.ImageSlider
+            android:layout_width="match_parent"
+            app:auto_cycle="true"
+            app:delay="0"
+            android:id="@+id/slider"
+            app:period="1000"
+            app:error_image="@color/colorPrimary"
+            app:placeholder="@color/colorPrimaryDark"
+            app:corner_radius="20"
+            android:layout_height="200dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="1dp"
+                android:text="더 많은 축제를 보고싶다면?"
+                android:textSize="12sp"></TextView>
+
+            <ImageButton
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:id="@+id/festivalInfo"
+                android:layout_width="103dp"
+                android:layout_height="54dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/more_icon" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_gravity="center"
+            android:text="맞춤 추천 여행지"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/course_iv"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+
+            <ImageView
+                android:id="@+id/course_iv2"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@+id/course_iv"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/course_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="title"
+                android:layout_marginTop="130dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/course_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/course_iv"
+                android:text="title"
+                android:layout_marginTop="150dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#00ff0000"
+                android:id="@+id/course_button"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/course_iv"
+                android:text="추천 여행지 코스"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                ></TextView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_below="@+id/course_iv"
+                android:layout_height="200dp"
+                android:background="#00ff0000"
+                android:id="@+id/course_button2"
+                >
+            </Button>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

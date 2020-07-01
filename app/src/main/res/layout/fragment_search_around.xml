@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <!-- display current address using TMap API -->
+        <TextView
+            android:id="@+id/search_around_tv_location"
+            android:text="LOCATION"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:gravity="center|left"/>
+
+        <!-- Location refresh -->
+        <ImageView
+            android:tint="@color/white"
+            android:id="@+id/search_round_btn_location"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_refresh"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+    <!-- display current location on map -->
+    <com.skt.Tmap.TMapView
+        android:id="@+id/search_around_tmapview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <!-- categorize contents by contenttypeid -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/search_around_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/search_around_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

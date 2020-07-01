@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:background="#fff">
+
+    <LinearLayout
+        android:id="@+id/cell_title_background"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="bottom"
+        android:background="@drawable/ic_launcher_background">
+        <TextView
+            android:id="@+id/cell_title_title"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="군포문화예술회관"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:background="#99626262"/>
+    </LinearLayout>
+
+</LinearLayout>

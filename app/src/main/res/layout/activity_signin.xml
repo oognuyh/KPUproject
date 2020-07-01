@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#33bbff"
+    >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="209dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@mipmap/lg_splash" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Flip the Trip Over"
+        android:textSize="44dp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:layout_marginTop="450dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:text="Google Login"
+        android:id="@+id/GoogleLoginbutton"></com.google.android.gms.common.SignInButton>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../d.iml" filepath="$PROJECT_DIR$/../d.iml" group="d" />
+      <module fileurl="file://$PROJECT_DIR$/../launcher/launcher.iml" filepath="$PROJECT_DIR$/../launcher/launcher.iml" group="d/launcher" />
+      <module fileurl="file://$PROJECT_DIR$/unityLibrary.iml" filepath="$PROJECT_DIR$/unityLibrary.iml" group="d/unityLibrary" />
+    </modules>
+  </component>
+</project>
